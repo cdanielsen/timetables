@@ -1,3 +1,3 @@
 <h1>Edit station <%= @station.reload.name %></h1>
 <%= render('layouts/errors', object: @station) %>
-<%= render('station_form') %>
+<%= render('layouts/input_form', object: @station) %>

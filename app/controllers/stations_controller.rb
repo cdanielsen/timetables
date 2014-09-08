@@ -17,12 +17,10 @@ class StationsController < ApplicationController
 
   def show
     @station = Station.find(params[:id])
-    render('show')
   end
 
   def edit
     @station = Station.find(params[:id])
-    render('edit')
   end
 
   def update

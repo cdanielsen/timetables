@@ -1,0 +1,11 @@
+<% content_for(:title, "New Line | Timetables") %>
+<h1>Line Master</h1>
+<ul>
+  <% @lines.each do |line| %>
+    <li><%= link_to "#{line.name}", line_path(line.id) %></li>
+  <% end %>
+</ul>
+<h1>Add a new line</h1>
+
+<%= render('layouts/errors', object: @line) %>
+<%= render('layouts/input_form', object: @line) %>
