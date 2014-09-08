@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :stations
+  resources :stations, except: :new
 
   resources :stops
 

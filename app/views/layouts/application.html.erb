@@ -7,8 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+<div class='container'>
+  <% if flash[:alert] %>
+    <div class="alert alert-info alert-dismissable" role="alert">
+      <%= flash[:alert] %>
+    </div>
+  <% elsif flash[:notice] %>
+    <div class="alert alert-warning alert-dismissable" role="alert">
+    <%= flash[:notice] %>
+    </div>
+  <% end %>
+  <%= yield %>
+</div>
 
 </body>
 </html>
