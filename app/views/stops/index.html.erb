@@ -1,0 +1,11 @@
+<% content_for(:title, "New Stop | Timetables") %>
+<h1>Stop Master</h1>
+<ul>
+  <% @stops.each do |stop| %>
+    <li><%= link_to "#{stop.name}", stop_path(stop.id) %></li>
+  <% end %>
+</ul>
+<h1>Add a new stop</h1>
+
+<%= render('layouts/errors', object: @stop) %>
+<%= render('stops/input_form') %>
