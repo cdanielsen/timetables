@@ -20,4 +20,26 @@ class StationsController < ApplicationController
     render('show')
   end
 
+  def edit
+    @station = Station.find(params[:id])
+    render('edit')
+  end
+
+  def update
+    @station = Station.find(params[:id])
+    if @station.update(params[:station])
+      flash[:notice]="Station Updated"
+      redirect_to("/stations/#{@station.id}")
+    else
+      render('edit')
+    end
+  end
+
+  def destroy
+    @station = Station.find(params[:id])
+    @station.destroy
+    flash[:alert]= "Station Deleted"
+    redirect_to('/stations')
+  end
+
 end
