@@ -1,4 +1,10 @@
 <h1><%= @line.name %></h1>
+<h3>Associated Stations:</h3>
+  <ul>
+    <% @line.stations.each do |station| %>
+      <li><%= station.name %></li>
+    <% end %>
+  </ul>
 <p>
   <%= link_to "Edit line", edit_line_path(@line), class: 'btn btn-info' %>
 </p>
