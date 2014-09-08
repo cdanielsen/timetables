@@ -1,0 +1,8 @@
+<% content_for(:title, "New Station | Timetables") %>
+<h1>Station Master</h1>
+<ul>
+  <% @stations.each do |station| %>
+    <li><%= station.name %></li>
+  <% end %>
+</ul>
+<h1>Add a new station</h1>
