@@ -1,0 +1,10 @@
+<h1><%= @stop.name %></h1>
+<p>
+  <%= link_to "Edit stop", edit_stop_path(@stop), class: 'btn btn-info' %>
+</p>
+
+<p>
+  <%= link_to "Delete stop", stop_path(@stop),
+                                class: 'btn btn-danger',
+                                data: {confirm: 'Woah, really?', method: 'delete'} %>
+</p>
