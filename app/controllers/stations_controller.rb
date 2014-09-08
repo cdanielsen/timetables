@@ -15,7 +15,9 @@ class StationsController < ApplicationController
     end
   end
 
-  # def edit
-
+  def show
+    @station = Station.find(params[:id])
+    render('show')
+  end
 
 end

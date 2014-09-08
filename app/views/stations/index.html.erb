@@ -2,7 +2,7 @@
 <h1>Station Master</h1>
 <ul>
   <% @stations.each do |station| %>
-    <li><%= station.name %></li>
+    <li><%= link_to "#{station.name}", station_path(station.id) %></li>
   <% end %>
 </ul>
 <h1>Add a new station</h1>
