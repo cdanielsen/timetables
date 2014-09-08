@@ -1,0 +1,3 @@
+<h1>Edit Line <%= @line.reload.name %></h1>
+<%= render('layouts/errors', object: @line) %>
+<%= render('layouts/input_form', object: @line) %>

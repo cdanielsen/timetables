@@ -1,0 +1,10 @@
+<h1><%= @line.name %></h1>
+<p>
+  <%= link_to "Edit line", edit_line_path(@line), class: 'btn btn-info' %>
+</p>
+
+<p>
+  <%= link_to "Delete line", line_path(@line),
+                                class: 'btn btn-danger',
+                                data: {confirm: 'Woah, really?', method: 'delete'} %>
+</p>
