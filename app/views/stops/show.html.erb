@@ -1,4 +1,6 @@
 <h1><%= @stop.name %></h1>
+<h3>Line: <%= @stop.line.name %></h3>
+<h3>Station: <%= @stop.station.name %></h3>
 <p>
   <%= link_to "Edit stop", edit_stop_path(@stop), class: 'btn btn-info' %>
 </p>
