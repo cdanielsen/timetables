@@ -6,13 +6,8 @@ class StopsController < ApplicationController
   end
 
   def create
-    @stop = Stop.new(params[:stop])
-    if @stop.save
-      flash[:notice] = "Stop created!"
-      redirect_to('/stops')
-    else
-      render('index')
-    end
+    @stop = Stop.create(params[:stop])
+    redirect_to('/stops')
   end
 
   def show
