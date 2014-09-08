@@ -6,13 +6,16 @@ class StationsController < ApplicationController
 
   def create
     @station = Station.new(params[:station])
+    @stations = Station.all
     if @station.save
       flash[:notice] = "Station created!"
       redirect_to('/stations')
     else
-      flash[:alert] = "Can't create a station with no name!"
-      redirect_to('/stations')
+      render('index')
     end
   end
+
+  # def edit
+
 
 end
