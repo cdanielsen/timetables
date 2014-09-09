@@ -6,8 +6,13 @@ class StopsController < ApplicationController
   end
 
   def create
-    @stop = Stop.create(params[:stop])
-    redirect_to('/stops')
+    @stops = Stop.all
+    @stop = Stop.new(params[:stop])
+    if @stop.save
+      redirect_to('/stops')
+    else
+      render('index')
+    end
   end
 
   def show
