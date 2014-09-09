@@ -7,7 +7,12 @@
     <% if object.class == Station %>
       <% Line.all.each do |line| %>
         <%= check_box_tag "#{object.class.to_s.downcase}[line_ids][]", line.id %>
-      <%= line.name %><br/>
+        <%= line.name %><br/>
+      <% end %>
+    <% else %>
+      <% Station.all.each do |station| %>
+        <%= check_box_tag "#{object.class.to_s.downcase}[station_ids][]", station.id %>
+        <%= station.name %><br/>
       <% end %>
     <% end %>
   </div>
