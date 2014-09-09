@@ -16,4 +16,6 @@ After cloning repository...
 - Run "rails server"
 - Load page @ localhost:3000
 
+OR visit app on Heroku @(http://secure-woodland-1267.herokuapp.com/)
+
 Copyright MIT
