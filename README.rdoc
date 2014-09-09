@@ -1,28 +1,19 @@
-== README
+~~ Train Timetables ~~
+=====================================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##Author:
 
-Things you may want to cover:
+* [Christian Danielsen] (https://github.com/cdanielsen)
+* [Patrick David] (https://github.com/patrickdavid)
 
-* Ruby version
+##Description:
+A program for users to create information about a train system that includes stations, lines, and stops.
 
-* System dependencies
+##Implementation:
+After cloning repository...
+- Run "bundle" to install needed gems
+- Run "rake db:create" and "rake db:migrate" to setup database
+- Run "rails server"
+- Load page @ localhost:3000
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Copyright MIT
