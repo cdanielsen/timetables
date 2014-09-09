@@ -1,0 +1,35 @@
+<% content_for(:title, "Home | Timetables") %>
+
+<div class='row'>
+  <div class="jumbotron">
+    <h1 align='right'>PDX Timetables</h1>
+  </div>
+</div>
+<div class='row'>
+  <div class ='col-xs-4'>
+    <h2>Stop Master</h2>
+    <ul>
+      <% sorted_stops = @stops.sort { |stop1, stop2| stop1.line_id <=> stop2.line_id } %>
+      <% sorted_stops.each do |stop| %>
+        <li><%= link_to "#{stop.line.name}@#{stop.station.name}", stop_path(stop.id) %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class ='col-xs-4'>
+    <h2>Station Master</h2>
+    <ul>
+      <% @stations.each do |station| %>
+        <li><%= link_to "#{station.name}", station_path(station.id) %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class ='col-xs-4'>
+    <h2>Line Master</h2>
+    <ul>
+      <% @lines.each do |line| %>
+        <li><%= link_to "#{line.name}", line_path(line.id) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
